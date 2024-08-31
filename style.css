@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(35, 35, 35);
+    height: 90vh;
+    overflow: hidden;
+}
+.card{
+    background: linear-gradient(135deg, yellow, cyan);
+    color: black;
+    width: 90%;
+    max-width: 470px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background-color: white;
+    color: black;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 15px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -16px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col i{
+    font-size: 45px;
+    margin-right: 10px;
+    color: black;
+}
+.humidity, .wind{
+    font-size: 25px;
+    margin-top: -6px;
+}
+.weather{
+    display: none;
+}
+.info{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.info a{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width : 450px){
+    body{
+        background: linear-gradient(135deg, black, black, white);
+    }
+    .details{
+        display: flex;
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    .card{
+        background: linear-gradient(135deg, blue, orange);
+    }
+}
+
+@media only screen and (max-width : 380px){
+    body{
+        height: 100vh;
+    }
+    .card{
+        margin-top: 70px;
+    }
+    .search input{
+        height: 45px;
+    }
+    .search button{
+        height: 45px;
+        width: 28px;
+        border-radius: 15px;
+    }
+    .col  i{
+        font-size: 30px;
+    }
+    .humidity, .wind{
+        font-size: 18px;
+    }
+    .weather h1{
+        font-size: 65px;
+    }
+    .weather h2{
+        font-size: 32px;
+    }
+}
