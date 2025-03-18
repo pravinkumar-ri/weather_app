@@ -1,10 +1,6 @@
 # Weather App
 
-## Language Used
-
-- HTML
-- CSS
-- Javascript
+#### Developed by using HTML, CSS and Javascript
 
 ## Link
 
