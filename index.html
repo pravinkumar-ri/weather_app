@@ -2,41 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="images/drizzle.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WeatherWave | Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/drizzle.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="Enter Your City" spellcheck="false">
-            <button><img src="images/search.png"></button>
+
+<div class="container">
+    <div class="glass-card">
+        <div class="search-wrapper">
+            <input type="text" id="cityInput" placeholder="Enter city name..." spellcheck="false">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <button id="geoBtnExtra" title="Use my location"><i class="fas fa-location-dot"></i></button>
         </div>
-        <div class="weather">
-            <img src="images/rain.png" class="weather-icon">
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">Chennai</h2>
-            <div class="details">
-                <div class="col">
-                    <i class="fa-sharp fa-solid fa-droplet" aria-hidden="true"></i>
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
+
+        <div id="weatherContainer" class="weather-display">
+            <img src="" alt="weather icon" id="weatherIcon" class="weather-icon">
+            <h1 class="temp" id="temperature">--°C</h1>
+            <h2 class="city" id="cityName">--</h2>
+            <div class="date-time" id="localDateTime">--</div>
+
+            <div class="details-row">
+                <div class="metric-card">
+                    <i class="fas fa-tint"></i>
+                    <div class="metric-info">
+                        <p class="metric-value" id="humidityValue">--%</p>
+                        <p class="metric-label">Humidity</p>
                     </div>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-wind" aria-hidden="true"></i>
-                    <div>
-                        <p class="wind">15 Km/h</p>
-                        <p>Wind Speed</p>
+                <div class="metric-card">
+                    <i class="fas fa-wind"></i>
+                    <div class="metric-info">
+                        <p class="metric-value" id="windValue">-- km/h</p>
+                        <p class="metric-label">Wind Speed</p>
                     </div>
                 </div>
             </div>
-            <p class="info">By <a href="https://github.com/pravinkumar-ri" target="_blank">@ri</a></p>
+
+            <div class="extra-stats">
+                <div class="stat-item">
+                    <i class="fas fa-compress-alt"></i>
+                    <span><span id="pressure">--</span> hPa</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-eye"></i>
+                    <span><span id="visibility">--</span> km</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Feels <span id="feelsLike">--</span>°C</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="loaderElement" class="loader-container">
+            <div class="loader"></div>
+            <p>Fetching weather...</p>
+        </div>
+
+        <div id="errorMessage" class="error-msg">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="errorText">City not found. Try again!</span>
+        </div>
+
+        <div class="footer-note">
+            Created with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by <a href="https://github.com/pravinkumar-ri" target="_blank">@ri</a>
         </div>
     </div>
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/d477a6cee0.js" crossorigin="anonymous"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
